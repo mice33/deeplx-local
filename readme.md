@@ -7,7 +7,7 @@
 翻译超大文本时，会自动做拆分并行翻译合并处理。
 
 ### 一键启动
-`docker run --pull=always -itd -p 8080:62155 neccen/deeplx-local:latest`
+`docker run --pull=always -itd -p 8080:62155 mice33/deeplx-local:latest`
 
 
 **翻译地址：**`http://localhost:8080/translate`
@@ -15,7 +15,7 @@
 
 添加 `route`环境变量可修改默认翻译地址, 如：
 
-`docker run --pull=always -itd -p 8080:62155 -e route=abc neccen/deeplx-local:latest`
+`docker run --pull=always -itd -p 8080:62155 -e route=abc mice33/deeplx-local:latest`
 
 翻译地址为`http://localhost:8080/abc`
 
@@ -33,13 +33,13 @@
 
 
 
-`docker run -itd -p 8080:62155 neccen/deeplx-local:latest`
+`docker run -itd -p 8080:62155 mice33/deeplx-local:latest`
 
 翻译地址为 `http://localhost:8080/translate`
 
 ##### 完整命令:
 
-`docker run -itd -p 8080:62155 -v /url.txt文件目录:/usr/local/bin/url.txt -e route xxx -e 360_api_key="xxxxx" neccen/deeplx-local:latest`
+`docker run -itd -p 8080:62155 -v /url.txt文件目录:/usr/local/bin/url.txt -e route xxx -e 360_api_key="xxxxx" mice33/deeplx-local:latest`
 
 
 #### 2. Docker Compose 运行
@@ -47,7 +47,7 @@
 version: '3.8'
 services:
   deeplx:
-    image: neccen/deeplx-local:latest
+    image: mice33/deeplx-local:latest
     ports:
       - "62155:62155"
     volumes:
